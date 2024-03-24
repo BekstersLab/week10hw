@@ -30,23 +30,26 @@ def home_page():  # define function called when root or /home url is accessed
     <!doctype>
     <html>
         <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
             <title>Home</title>
-            <link rel="stylesheet" href="./static/styles.css">
+            <link rel="stylesheet" href="{url_for('static', filename='styles.css')}">
         </head>
         <body>
-            <nav>
-                <a href="{home_url}">Home</a>
-                <a href="{about_url}">About</a>
-                <a href="{portfolio_url}">Portfolio</a>
-                <a href="{contact_url}">Contact</a>
-            </nav>
-            <main>
-            <h1>Home Page</h1>
-            <section>
-            <p>Welcome to my first Flask website!</p>
-            </section>
-            </main>
-            <footer>&copy; Bek &amp; SKY Get Into Tech, 2024</footer>
+            <div class="container-wrapper">
+                <nav>
+                    <a href="{home_url}">Home</a>
+                    <a href="{about_url}">About</a>
+                    <a href="{portfolio_url}">Portfolio</a>
+                    <a href="{contact_url}">Contact</a>
+                </nav>
+                <main>
+                <h1>Home Page</h1>
+                <section>
+                <p>Welcome to my first Flask website!</p>
+                </section>
+                </main>
+                <footer>&copy; Bek &amp; SKY Get Into Tech, 2024</footer>
+            </div>
         </body>
     </html>
     """
@@ -65,58 +68,134 @@ def about_page():  # define the function for the about page
     <!doctype>
     <html>
         <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
             <title>About</title>
-            <link rel="stylesheet" href="./static/styles.css">
+            <link rel="stylesheet" href="{url_for('static', filename='styles.css')}">
         </head>
         <body>
-            <nav>
-                <a href="{home_url}">Home</a>
-                <a href="{about_url}">About</a>
-                <a href="{portfolio_url}">Portfolio</a>
-                <a href="{contact_url}">Contact</a>
-            </nav>
-            <main>
-            <h1>About Page</h1>
-            <section>
-            <p>This is a very simple Flask website to learn about using html routes and anchor tags for navigating between pages.</p>
-            <p>It's not pretty and it's really not practical (lots of duplicated code).</p>
-            <p>To be continued...</p>
-            </section>
-            </main>
-            <footer>&copy; Bek &amp; SKY Get Into Tech, 2024</footer>
+            <div class="container-wrapper">
+                <nav>
+                    <a href="{home_url}">Home</a>
+                    <a href="{about_url}">About</a>
+                    <a href="{portfolio_url}">Portfolio</a>
+                    <a href="{contact_url}">Contact</a>
+                </nav>
+                <main>
+                <h1>About Page</h1>
+                <section>
+                <p>This is a very simple Flask website to learn about using html routes and anchor tags for navigating between pages.</p>
+                <p>It's not pretty and it's really not practical (lots of duplicated code).</p>
+                <p>To be continued...</p>
+                </section>
+                </main>
+                <footer>&copy; Bek &amp; SKY Get Into Tech, 2024</footer>
+            </div>
         </body>
     </html>     
     """
 
 
 # repeat the structure for portfolio_page
+# addition of variables for image sources and external urls to link to
 @app.route('/portfolio')
 def portfolio_page():
     home_url = url_for('home_page')
     about_url = url_for('about_page')
     portfolio_url = url_for('portfolio_page')
     contact_url = url_for('contact_page')
+    image_src_project_1 = url_for('static', filename='/Image/PPC-News.png')
+    external_url_project_1 = "https://github.com/BekstersLab/CFG-Web-Dev---Group-2/tree/main"
+    image_src_project_2 = url_for('static', filename='/Image/3-Column-Card.png')
+    external_url_project_2 = "https://github.com/BekstersLab/3-column-preview-card-component-main/tree/main"
+    image_src_project_3 = url_for('static', filename='/Image/NFT-Preview-Card.png')
+    external_url_project_3 = "https://github.com/BekstersLab/NFT-preview-card-component"
     return f"""
     <!doctype>
     <html>
         <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
             <title>Portfolio</title>
-            <link rel="stylesheet" href="./static/styles.css">
+            <link rel="stylesheet" href="{url_for('static', filename='styles.css')}">
         </head>
         <body>
-            <nav>
-                <a href="{home_url}">Home</a>
-                <a href="{about_url}">About</a>
-                <a href="{portfolio_url}">Portfolio</a>
-                <a href="{contact_url}">Contact</a>
-            </nav>
-            <main>
-            <h1>Portfolio Page</h1>
-            <section>
-            <p>Projects...</p>
-            </section>
-            </main>
-            <footer>&copy; Bek &amp; SKY Get Into Tech, 2024</footer>
+            <div class="container-wrapper">
+                <nav>
+                    <a href="{home_url}">Home</a>
+                    <a href="{about_url}">About</a>
+                    <a href="{portfolio_url}">Portfolio</a>
+                    <a href="{contact_url}">Contact</a>
+                </nav>
+                <main>
+                <h1>Portfolio Page</h1>
+                <section>
+                    <div class="portfolio-item colourway-1">
+                        <div class="portfolio-title">
+                            <a href="{external_url_project_1}" target="_blank">
+                            <h2>PPC News</h2>
+                            </a>
+                        </div>
+                        <div class="content-container">
+                            <div class="image">
+                                <a href="{external_url_project_1}" target="_blank">
+                                <img src="{image_src_project_1}">
+                                </a>
+                            </div>
+                            <div class="text">
+                                <p>PPC News final project website for Code First Girls Web Development Kickstarter eight week course.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin mi odio, quis malesuada felis commodo quis.</p>
+                                <p>Proin semper, justo at sollicitudin pellentesque, tortor nunc sollicitudin mauris, quis dignissim tortor odio non nulla.</p>
+                                <p>Donec vulputate, justo vitae sollicitudin consectetur, dolor neque egestas diam, convallis malesuada lectus mi non arcu.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="portfolio-item colourway-2">
+                        <div class="portfolio-title">
+                            <a href="{external_url_project_2}" target="_blank">
+                            <h2>3 Column Preview Card Component</h2>
+                            </a>
+                        </div>
+                        <div class="content-container">
+                            <div class="image">
+                                <a href="{external_url_project_2}" target="_blank">
+                                <img src="{image_src_project_2}">
+                                </a>
+                            </div>
+                            <div class="text">
+                                <p>A Frontend Mentor challenge.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin mi odio, quis malesuada felis commodo quis.</p>
+                                <p>Proin semper, justo at sollicitudin pellentesque, tortor nunc sollicitudin mauris, quis dignissim tortor odio non nulla.</p>
+                                <p>Donec vulputate, justo vitae sollicitudin consectetur, dolor neque egestas diam, convallis malesuada lectus mi non arcu.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="portfolio-item colourway-1">
+                        <div class="portfolio-title">
+                            <a href="{external_url_project_3}" target="_blank">
+                            <h2>NFT Preview Card Component</h2>
+                            </a>
+                        </div>
+                        <div class="content-container">
+                            <div class="image">
+                                <a href="{external_url_project_3}" target="_blank">
+                                <img src="{image_src_project_3}">
+                                </a>
+                            </div>
+                            <div class="text">
+                                <p>A Frontend Mentor challenge.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin mi odio, quis malesuada felis commodo quis.</p>
+                                <p>Proin semper, justo at sollicitudin pellentesque, tortor nunc sollicitudin mauris, quis dignissim tortor odio non nulla.</p>
+                                <p>Donec vulputate, justo vitae sollicitudin consectetur, dolor neque egestas diam, convallis malesuada lectus mi non arcu.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                </main>
+                <footer>&copy; Bek &amp; SKY Get Into Tech, 2024</footer>
+            </div>
         </body>
     </html>
     """
@@ -133,23 +212,26 @@ def contact_page():
     <!doctype>
     <html>
         <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
             <title>Contact</title>
-            <link rel="stylesheet" href="./static/styles.css">
+            <link rel="stylesheet" href="{url_for('static', filename='styles.css')}">
         </head>
         <body>
-            <nav>
-                <a href="{home_url}">Home</a>
-                <a href="{about_url}">About</a>
-                <a href="{portfolio_url}">Portfolio</a>
-                <a href="{contact_url}">Contact</a>
-            </nav>
-            <main>
-            <h1>Contact Page</h1>
-            <section>
-            <p>Contact me...</p>
-            </section>
-            </main>
-            <footer>&copy; Bek &amp; SKY Get Into Tech, 2024</footer>
+            <div class="container-wrapper">
+                <nav>
+                    <a href="{home_url}">Home</a>
+                    <a href="{about_url}">About</a>
+                    <a href="{portfolio_url}">Portfolio</a>
+                    <a href="{contact_url}">Contact</a>
+                </nav>
+                <main>
+                <h1>Contact Page</h1>
+                <section>
+                <p>Contact me...</p>
+                </section>
+                </main>
+                <footer>&copy; Bek &amp; SKY Get Into Tech, 2024</footer>
+            </div>
         </body>
     </html>     
     """
