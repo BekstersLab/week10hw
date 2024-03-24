@@ -26,6 +26,7 @@ def homepage_url():     #FUNCTIONS TO ROUTE TO OTHER PAGES. LINKS EMBEDDED IN TH
             <h2>
                 Menu
             </h2>
+                <b>Home</b>
                 <a href="{about_us}">About Us</a>
                 <a href="{collection}">Plant Collection</a>
                 <a href="{subscribe}">Subscribe</a>
@@ -74,6 +75,7 @@ def about_us_url():
                 Menu
             </h2>
                 <a href="{home_page}">Home</a>
+                <b>About Us</b>
                 <a href="{collection}">Plant Collection</a>
                 <a href="{subscribe}">Subscribe</a>
                 <a href="{login}">Login</a>
@@ -137,6 +139,7 @@ def collection_url():
             </h2>
                 <a href="{home_page}">Home</a>
                 <a href="{about_us}">About Us</a>
+                <b>Collection</b>
                 <a href="{subscribe}">Subscribe</a>
                 <a href="{login}">Login</a>
                 <a href="{admin}">Administrator Login</a>
@@ -185,6 +188,7 @@ def subscribe_url():
                     <a href="{home_page}">Home</a>
                     <a href="{about_us}">about_us_url</a>
                     <a href="{collection}">Plant Collection</a>
+                    <b>Subscribe</b>
                     <a href="{login}">Login</a>
                     <a href="{admin}">Administrator Login</a>
                 <hr>
@@ -233,6 +237,7 @@ def customer_login_url():
                     <a href="{about_us}">about_us_url</a>
                     <a href="{collection}">Plant Collection</a>
                     <a href="{subscribe}">Subscribe</a>
+                    <b>Login</b>
                     <a href="{admin}">Administrator Login</a>
                 <hr>
                 <h8>
@@ -279,6 +284,7 @@ def admin_login_url():
                     <a href="{collection}">Plant Collection</a>
                     <a href="{subscribe}">Subscribe</a>
                     <a href="{login}">Log in</a>
+                    <b>Administrator Login</b>
                 <hr>
                 <h8>
                     copyright Plantify ltd
