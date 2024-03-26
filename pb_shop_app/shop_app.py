@@ -187,8 +187,8 @@ def subscribe_url():
                     Menu
                 </h2>
                     <a href="{home_page}">Home</a>
-                    <a href="{about_us}">about_us_url</a>
-                    <a href="{collection}">Plant Collection</a>
+                    <a href="{about_us}">About Us</a>
+                    <a href="{collection}">Collection</a>
                     <b>Subscribe</b>
                     <a href="{login}">Login</a>
                     <a href="{admin}">Administrator Login</a>
@@ -235,8 +235,8 @@ def customer_login_url():
                     Menu
                 </h2>
                     <a href="{home_page}">Home</a>
-                    <a href="{about_us}">about_us_url</a>
-                    <a href="{collection}">Plant Collection</a>
+                    <a href="{about_us}">About Us</a>
+                    <a href="{collection}">Collection</a>
                     <a href="{subscribe}">Subscribe</a>
                     <b>Login</b>
                     <a href="{admin}">Administrator Login</a>
@@ -281,8 +281,8 @@ def admin_login_url():
                     Menu
                 </h2>
                     <a href="{home_page}">Home</a>
-                    <a href="{about_us}">about_us_url</a>
-                    <a href="{collection}">Plant Collection</a>
+                    <a href="{about_us}">About Us</a>
+                    <a href="{collection}">Collection</a>
                     <a href="{subscribe}">Subscribe</a>
                     <a href="{login}">Log in</a>
                     <b>Administrator Login</b>
