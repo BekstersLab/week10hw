@@ -151,6 +151,7 @@ def collection_url():
     </html> 
     """
 
+
 # SUGGESTION: ADD A TABLE TO ALLOW A POST REQUEST INTO A DATABASE. COLUMNS: PERSON ID, FIRST NAME, LAST NAME AND EMAIL, PASSWORD
 # SUBSCRIBE PAGE
 @app.route('/subscribe') #ROUTE TO SUBSCRIBE PAGE
@@ -292,7 +293,6 @@ def admin_login_url():
             </body>
         </html> 
         """
-
 
 
 # RUN FLASK APP
